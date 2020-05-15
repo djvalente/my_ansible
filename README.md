@@ -1,2 +1,2 @@
 # my_ansible
-Meus exemplos de Ansible
+Atualmente apenas tenho os "exercicios" do curso da Pluralsight (recomendo), mas brevemente tudo o que for criando ;)
