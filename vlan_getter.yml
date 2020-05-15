@@ -1,0 +1,24 @@
+---
+- name: "PLAY 1: Capture and store VLANs"
+  hosts: switchs
+  connection: network_cli
+  tasks:
+    - name: "TASK 1: Get VLAN config from switchs"
+      ios_command:
+        commands: "show vlan"
+      register: cli_result
+
+    - name: "TASK 2: Print sh vlans output"
+      debug:
+        msg: "{{ cli_result }}"
+
+    - name: "TASK 3: Create outputs/ folder"
+      file:
+        path: "outputs"
+        state: directory
+      run_once: true
+
+    - name: "TASK 4: Write output to file"
+      copy:
+        content: "{{ cli_result.stdout[0] }}\n"
+        dest: "outputs/{{ inventory_hostname }}.txt"

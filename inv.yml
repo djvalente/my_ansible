@@ -1,0 +1,12 @@
+---
+all:
+  children:
+    switchs:
+      hosts:
+        10.126.17.114:
+        10.126.17.115:
+
+# INI format
+# [switchs]
+# S1
+# S2

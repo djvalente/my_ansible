@@ -1,0 +1,8 @@
+---
+vlans:
+  - name: "SeebeyondBDPP"
+    id: "833"
+  - name: "HadoopPRD"
+    id: "892"
+  - name: "HadoopPP"
+    id: "893"
